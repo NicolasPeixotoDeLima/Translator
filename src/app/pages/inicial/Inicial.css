@@ -1,3 +1,7 @@
+.content {
+  margin-top: 90px;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -13,7 +17,7 @@
 .source {
   background-color: #202332;
   opacity: 0.9;
-  width: 500px;
+  width: 600px;
   height: 330px;
   margin-right: 20px;
   border-radius: 20px;
@@ -22,7 +26,7 @@
 .result {
   background-color: #202332;
   opacity: 0.9;
-  width: 500px;
+  width: 600px;
   height: 330px;
   margin-right: 20px;
   border-radius: 20px;
@@ -34,4 +38,80 @@
   justify-content: space-evenly;
   margin-top: 13px;
   color: rgb(189, 189, 189);
+}
+
+.languageSelector button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.languageSelector .active {
+  background-color: rgba(156, 156, 156, 0.6);
+  opacity: 0.9;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 5px 10px;
+  transform: scale(1.05);
+}
+
+.linha {
+  border: 0.5px solid rgb(112, 112, 112);
+  margin-top: 14px;
+  margin-bottom: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  opacity: 0.2;
+}
+
+.writeField {
+  background-color: #202332;
+  opacity: 0.9;
+  width: 600px;
+  height: 180px;
+  margin-top: 10px;
+  border-radius: 20px;
+  color: white;
+  border: none;
+  resize: none;
+  padding: 15px;
+}
+
+.writeField:focus {
+  outline: none;
+}
+
+.translateButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-end;
+  gap: 8px;
+  background-color: #273fa9;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.translateButton:hover {
+  background-color: #1e3180;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.writeField.animate {
+  animation: fadeSlide 0.4s ease;
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
