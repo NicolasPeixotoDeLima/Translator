@@ -18,7 +18,10 @@ export const Inicial = () => {
   type LanguageKey = keyof typeof langCodes;
 
   const handleTranslate = async () => {
-    if (!selected || !translated || !inputText) return;
+    if (!selected || !translated || !inputText)
+      return alert(
+        "Por favor, selecione os idiomas e insira o texto a ser traduzido."
+      );
 
     const from = langCodes[selected];
     const to = langCodes[translated];
