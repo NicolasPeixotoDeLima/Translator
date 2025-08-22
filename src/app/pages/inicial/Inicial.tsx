@@ -32,18 +32,18 @@ export const Inicial = () => {
       )}&langpair=${from}|${to}`
     );
     const data = await response.json();
-    setOutputText(data.responseData.translatedText);
+    setOutputText(data.responseData.translatedText); // Atualiza o estado com o texto traduzido
   };
 
-  const outputRef = useRef<HTMLTextAreaElement>(null);
+  const outputRef = useRef<HTMLTextAreaElement>(null); // Referência para o campo de saída
 
   useEffect(() => {
     if (outputText && outputRef.current) {
-      outputRef.current.classList.add("animate");
+      outputRef.current.classList.add("animate"); // Adicionar a classe para animação
 
       setTimeout(() => {
-        outputRef.current?.classList.remove("animate");
-      }, 500);
+        outputRef.current?.classList.remove("animate"); // Remover a classe após a animação
+      }, 500); // Duração da animação em ms
     }
   }, [outputText]);
 
@@ -57,7 +57,7 @@ export const Inicial = () => {
           <div className="languageSelector">
             {languages.map((lang) => (
               <button
-                key={lang}
+                key={lang} // Adicione uma chave única para cada botão
                 className={selected === lang ? "active" : ""}
                 onClick={() => setSelected(lang)}
               >
